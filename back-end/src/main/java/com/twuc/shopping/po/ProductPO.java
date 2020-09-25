@@ -31,6 +31,6 @@ public class ProductPO {
     @NotNull
     private String quantifier;
 
-//    @OneToMany(cascade = CascadeType.REMOVE,mappedBy = "productPO")
-//    private List<OrderPO> orderPOs;
+    @OneToMany(cascade = CascadeType.REMOVE,mappedBy = "productPO")
+    private List<OrderPO> orderPOs;
 }

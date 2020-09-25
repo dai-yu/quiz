@@ -14,13 +14,13 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "order")
+@Table(name = "orderPO")
 public class OrderPO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
-    @NotNull
-    private String productName;
+    @ManyToOne
+    private ProductPO productPO;
     @NotNull
     @Min(0)
     private int price;
