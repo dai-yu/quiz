@@ -8,4 +8,6 @@ import java.util.List;
 public interface ProductRepository extends CrudRepository<ProductPO,Integer> {
     @Override
     List<ProductPO> findAll();
+
+    ProductPO findByProductName(String productName);
 }

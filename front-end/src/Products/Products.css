@@ -1,0 +1,19 @@
+.productPage{
+    height: 730px;
+    width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.oneProduction {
+    margin: 20px;
+    margin-top: 10px;
+    height: 200px;
+    width: 150px;
+    background-color: azure;
+}
+.oneProduction button{
+    float: right;
+    margin-right: 8%;
+    background-color: blue;
+}
