@@ -19,7 +19,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class HomePageControllerTest {
+public class ProductControllerTest {
     @Autowired
     MockMvc mockMvc;
 
@@ -37,11 +37,13 @@ public class HomePageControllerTest {
         ProductPO productPO3 = ProductPO.builder().productName("苹果").quantifier("斤").image("苹果.png").price(5).build();
         ProductPO productPO4 = ProductPO.builder().productName("奥利奥").quantifier("盒").image("奥利奥.png").price(15).build();
         ProductPO productPO5 = ProductPO.builder().productName("电池").quantifier("对").image("电池.png").price(2).build();
+        ProductPO productPO6 = ProductPO.builder().productName("方便面").quantifier("包").image("方便面.png").price(4).build();
         productRepository.save(productPO);
         productRepository.save(productPO2);
         productRepository.save(productPO3);
         productRepository.save(productPO4);
         productRepository.save(productPO5);
+        productRepository.save(productPO6);
     }
 
     @AfterEach

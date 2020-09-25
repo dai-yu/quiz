@@ -1,36 +1,26 @@
-package com.twuc.shopping.po;
+package com.twuc.shopping.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-import java.util.List;
 
-@Builder
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@Table(name = "product")
-public class ProductPO {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+@Builder
+public class Order {
     @NotNull
     private String productName;
     @NotNull
     @Min(0)
     private int price;
     @NotNull
-    private String image;
+    @Min(0)
+    private int number;
     @NotNull
     private String quantifier;
-
-//    @OneToMany(cascade = CascadeType.REMOVE,mappedBy = "productPO")
-//    private List<OrderPO> orderPOs;
 }

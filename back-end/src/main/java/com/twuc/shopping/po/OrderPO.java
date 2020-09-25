@@ -8,16 +8,14 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-import java.util.List;
 
 @Builder
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "product")
-public class ProductPO {
-
+@Table(name = "order")
+public class OrderPO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
@@ -27,10 +25,8 @@ public class ProductPO {
     @Min(0)
     private int price;
     @NotNull
-    private String image;
+    @Min(0)
+    private int number;
     @NotNull
     private String quantifier;
-
-//    @OneToMany(cascade = CascadeType.REMOVE,mappedBy = "productPO")
-//    private List<OrderPO> orderPOs;
 }
