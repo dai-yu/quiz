@@ -1,10 +1,10 @@
 package com.twuc.shopping.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.twuc.shopping.Server.ProductService;
 import com.twuc.shopping.domain.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,8 +25,11 @@ public class ProductController {
     }
 
     @PostMapping("/product")
-    public  ResponseEntity saveProduct(@RequestBody @Valid Product product){
-        productService.saveProduct(product);
-        return ResponseEntity.created(null).build();
+    public ResponseEntity saveProduct(@RequestBody @Valid Product product){
+        boolean flag = productService.saveProduct(product);
+        if (!flag){
+            return ResponseEntity.badRequest().body("{\"message\":\"商品已存在\"}");
+        }
+        return ResponseEntity.created(null).body("{\"message\":\"商品创建成功\"}");
     }
 }

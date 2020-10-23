@@ -7,5 +7,5 @@ import java.util.List;
 public interface ProductService {
     List<Product> getProductList();
 
-    void saveProduct(Product product);
+    boolean saveProduct(Product product);
 }

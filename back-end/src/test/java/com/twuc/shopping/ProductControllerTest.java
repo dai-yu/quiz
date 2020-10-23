@@ -46,11 +46,12 @@ public class ProductControllerTest {
         productRepository.save(productPO6);
     }
 
-    @AfterEach
+//    @AfterEach
     @Transactional
     public void clear(){
         productRepository.deleteAll();
     }
+
     @Test
     public void should_get_all_products_when_in_homepage() throws Exception {
         Long size= productRepository.count();
@@ -68,4 +69,5 @@ public class ProductControllerTest {
         assertEquals(6,productRepository.findByProductName("香蕉").getPrice());
         assertEquals("斤",productRepository.findByProductName("香蕉").getQuantifier());
     }
+
 }

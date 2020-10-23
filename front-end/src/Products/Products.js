@@ -9,7 +9,7 @@ export default class Products extends React.Component {
     };
   }
   componentDidMount() {
-    const url = "http://localhost:8080/product";
+    const url = "http://localhost:8088/product";
     let myHeaders = new Headers({
       "Access-Control-Allow-Origin": "*",
       "Content-Type": "text/plain",
@@ -27,7 +27,7 @@ export default class Products extends React.Component {
       });
   }
   render() {
-    const imgUrl = "data:img/";
+    const imgUrl = "/img/";
     return (
       <div className="productPage">
         {this.state.products.map((product) => (

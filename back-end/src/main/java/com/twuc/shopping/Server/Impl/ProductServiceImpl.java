@@ -26,8 +26,14 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     @Transactional
-    public void saveProduct(Product product) {
+    public boolean saveProduct(Product product) {
+        ProductPO byProductName = productRepository.findByProductName(product.getProductName());
+        if (byProductName!=null){
+            return false;
+        }
+
         productRepository.save(convertProductToProductPO(product));
+        return true;
     }
 
     public Product convertProductPOToProduct(ProductPO productPO) {
