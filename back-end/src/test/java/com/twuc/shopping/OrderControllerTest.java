@@ -77,19 +77,19 @@ public class OrderControllerTest {
         assertEquals(4,orderRepository.count());
     }
 
-    @Test
-    public void should_save_order_list() throws Exception{
-        ProductPO apple = productRepository.findByProductName("苹果");
-        ProductPO sprite = productRepository.findByProductName("雪碧");
-        Order order1 = Order.builder().productName(apple.getProductName()).price(apple.getPrice()).number(12).quantifier(apple.getQuantifier()).build();
-        Order order2 = Order.builder().productName(sprite.getProductName()).price(sprite.getPrice()).number(12).quantifier(sprite.getQuantifier()).build();
-        LinkedList<Order> list=new LinkedList<>();
-        list.add(order1);
-        list.add(order2);
-        OrderList orderList=OrderList.builder().orders(list).build();
-        String jsonString = objectMapper.writeValueAsString(orderList);
-        mockMvc.perform(post("/orders").content(jsonString).contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isCreated());
-//        assertEquals();
-    }
+//    @Test
+//    public void should_save_order_list() throws Exception{
+//        ProductPO apple = productRepository.findByProductName("苹果");
+//        ProductPO sprite = productRepository.findByProductName("雪碧");
+//        Order order1 = Order.builder().productName(apple.getProductName()).price(apple.getPrice()).number(12).quantifier(apple.getQuantifier()).build();
+//        Order order2 = Order.builder().productName(sprite.getProductName()).price(sprite.getPrice()).number(12).quantifier(sprite.getQuantifier()).build();
+//        LinkedList<Order> list=new LinkedList<>();
+//        list.add(order1);
+//        list.add(order2);
+//        OrderList orderList=OrderList.builder().orders(list).build();
+//        String jsonString = objectMapper.writeValueAsString(orderList);
+//        mockMvc.perform(post("/orders").content(jsonString).contentType(MediaType.APPLICATION_JSON))
+//                .andExpect(status().isCreated());
+////        assertEquals();
+//    }
 }

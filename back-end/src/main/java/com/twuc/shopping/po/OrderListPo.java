@@ -1,6 +1,5 @@
 package com.twuc.shopping.po;
 
-import com.twuc.shopping.domain.Order;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,6 +19,6 @@ public class OrderListPo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "orderList")
     List<OrderPO> orders;
 }

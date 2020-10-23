@@ -1,7 +1,6 @@
 package com.twuc.shopping.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.twuc.shopping.Server.ProductService;
+import com.twuc.shopping.service.ProductService;
 import com.twuc.shopping.domain.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

@@ -1,6 +1,6 @@
 package com.twuc.shopping.controller;
 
-import com.twuc.shopping.Server.OrderService;
+import com.twuc.shopping.service.OrderService;
 import com.twuc.shopping.domain.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
