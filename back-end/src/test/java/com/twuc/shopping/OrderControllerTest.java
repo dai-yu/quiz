@@ -2,6 +2,8 @@ package com.twuc.shopping;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.twuc.shopping.domain.Order;
+import com.twuc.shopping.domain.OrderList;
+import com.twuc.shopping.po.OrderListPo;
 import com.twuc.shopping.po.OrderPO;
 import com.twuc.shopping.po.ProductPO;
 import com.twuc.shopping.repository.OrderRepository;
@@ -13,6 +15,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.LinkedList;
 
 import static org.hamcrest.Matchers.hasSize;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -36,7 +40,7 @@ public class OrderControllerTest {
     @Autowired
     ObjectMapper objectMapper;
 
-    @BeforeEach
+//    @BeforeEach
     public void setUp(){
         ProductPO productPO = ProductPO.builder().productName("可口可乐").quantifier("瓶").image("可口可乐.png").price(3).build();
         productRepository.save(productPO);
@@ -48,7 +52,7 @@ public class OrderControllerTest {
         orderRepository.save(orderPO3);
     }
 
-    @AfterEach
+//    @AfterEach
     @Transactional
     public void clear(){
         orderRepository.deleteAll();
@@ -71,5 +75,21 @@ public class OrderControllerTest {
         mockMvc.perform(post("/order").content(jsonString).contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isCreated());
         assertEquals(4,orderRepository.count());
+    }
+
+    @Test
+    public void should_save_order_list() throws Exception{
+        ProductPO apple = productRepository.findByProductName("苹果");
+        ProductPO sprite = productRepository.findByProductName("雪碧");
+        Order order1 = Order.builder().productName(apple.getProductName()).price(apple.getPrice()).number(12).quantifier(apple.getQuantifier()).build();
+        Order order2 = Order.builder().productName(sprite.getProductName()).price(sprite.getPrice()).number(12).quantifier(sprite.getQuantifier()).build();
+        LinkedList<Order> list=new LinkedList<>();
+        list.add(order1);
+        list.add(order2);
+        OrderList orderList=OrderList.builder().orders(list).build();
+        String jsonString = objectMapper.writeValueAsString(orderList);
+        mockMvc.perform(post("/orders").content(jsonString).contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isCreated());
+//        assertEquals();
     }
 }

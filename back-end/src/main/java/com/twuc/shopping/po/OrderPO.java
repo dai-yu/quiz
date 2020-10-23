@@ -29,4 +29,7 @@ public class OrderPO {
     private int number;
     @NotNull
     private String quantifier;
+
+    @ManyToOne
+    private OrderListPo orderList;
 }
