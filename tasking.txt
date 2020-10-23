@@ -1,0 +1,20 @@
+task1 添加商品页
+subtask1编写api测试
+subtask2创建添加商品api
+subtask3创建添加商品路由
+subtask4创建页面
+subtask5发送请求，获取并处理
+
+task2 商城页面
+subtask1 编写api测试
+subtask2 创建获取商品的api
+subtask3 创建商城页面路由
+subtask4 创建商品展示页面
+subtask5 发送请求，获取商品列表
+
+task3 购物车
+subtask1 编写api测试
+subtask2 创建保存订单的api
+subtask3 创建购物车组件
+subtask4 将组件加入商品页
+subtask5 发送请求，保存订单

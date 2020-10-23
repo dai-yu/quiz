@@ -1,4 +1,5 @@
 import React from "react";
+import Cart from "../Cart/Cart";
 import "./Products.css";
 
 export default class Products extends React.Component {
@@ -40,6 +41,8 @@ export default class Products extends React.Component {
             <button>add to cart</button>
           </div>
         ))}
+
+      <Cart/>
       </div>
     );
   }
