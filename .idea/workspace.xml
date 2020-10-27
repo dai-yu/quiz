@@ -23,13 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fb9cd98-4377-4d8d-a1a2-d3a871ba6143" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back-end/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/Products/Products.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/Products/Products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back-end/src/main/java/com/twuc/shopping/service/Impl/OrderListServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/back-end/src/main/java/com/twuc/shopping/service/Impl/OrderListServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +76,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.17" />
@@ -87,17 +86,62 @@
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\gitRoom\quiz" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.OrderListControllerTest.should_save_order_list">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="OrderListControllerTest.should_save_order_list" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/back-end" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.twuc.shopping.OrderListControllerTest.should_save_order_list&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ProductControllerTest.should_save_product" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/back-end" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.twuc.shopping.ProductControllerTest.should_save_product&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="ShoppingApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="shopping.main" />
@@ -114,6 +158,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.OrderListControllerTest.should_save_order_list" />
+        <item itemvalue="Gradle.ProductControllerTest.should_save_product" />
         <item itemvalue="Spring Boot.ShoppingApplication" />
       </list>
     </recent_temporary>
@@ -127,6 +173,7 @@
       <option name="presentableId" value="Default" />
       <updated>1602397067110</updated>
       <workItem from="1602397068280" duration="2036000" />
+      <workItem from="1603786387874" duration="6705000" />
     </task>
     <servers />
   </component>
@@ -143,28 +190,29 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602399354472">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602399354472" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1602403437506">
+    <state width="1877" height="215" key="GridCell.Tab.0.bottom" timestamp="1603796085395">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602403437506" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1602403437505">
+    <state width="1877" height="215" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603796085395" />
+    <state width="1877" height="215" key="GridCell.Tab.0.center" timestamp="1603796085395">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602403437505" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1602403437505">
+    <state width="1877" height="215" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603796085395" />
+    <state width="1877" height="215" key="GridCell.Tab.0.left" timestamp="1603796085395">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602403437505" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1602403437505">
+    <state width="1877" height="215" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603796085395" />
+    <state width="1877" height="215" key="GridCell.Tab.0.right" timestamp="1603796085395">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602403437505" />
+    <state width="1877" height="215" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603796085395" />
     <state width="1877" height="282" key="GridCell.Tab.1.bottom" timestamp="1602403437506">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -181,5 +229,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602403437506" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1603786482149">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603786482149" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603786430168">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603786430168" />
   </component>
 </project>

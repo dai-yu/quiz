@@ -12,6 +12,7 @@ import com.twuc.shopping.service.OrderListService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 @Service
@@ -26,7 +27,9 @@ public class OrderListServiceImpl implements OrderListService {
 
     @Override
     public boolean saveOrderList(OrderList orderList) {
-        OrderListPo orderListPo = OrderListPo.builder().orders(orderList.getOrders().stream().map(order -> convertOrderToOrderPO(order)).collect(Collectors.toList())).build();
+        OrderListPo orderListPo = OrderListPo.builder().build();
+//        orderListRepository.save(orderListPo);
+        orderListPo.setOrders(orderList.getOrders().stream().map(order -> convertOrderToOrderPO(order,orderListPo)).collect(Collectors.toList()));
         orderListRepository.save(orderListPo);
         return true;
     }
@@ -40,13 +43,16 @@ public class OrderListServiceImpl implements OrderListService {
                 .build();
     }
 
-    public OrderPO convertOrderToOrderPO(Order order){
+    public OrderPO convertOrderToOrderPO(Order order,OrderListPo orderListPo){
         ProductPO productPO = productRepository.findByProductName(order.getProductName());
-        return  OrderPO.builder()
+        OrderPO orderPO = OrderPO.builder()
                 .productPO(productPO)
                 .quantifier(order.getQuantifier())
                 .price(order.getPrice())
                 .number(order.getNumber())
+                .orderList(orderListPo)
                 .build();
+//        orderRepository.save(orderPO);
+        return orderPO;
     }
 }
