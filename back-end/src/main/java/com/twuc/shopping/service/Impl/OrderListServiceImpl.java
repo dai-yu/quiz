@@ -11,8 +11,6 @@ import com.twuc.shopping.repository.ProductRepository;
 import com.twuc.shopping.service.OrderListService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 @Service
